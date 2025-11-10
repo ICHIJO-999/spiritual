@@ -44,7 +44,7 @@ export default function Generate() {
   // 認証状態を安定化
   if (authLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div key="loading" className="min-h-screen flex items-center justify-center">
         <Loader2 className="w-8 h-8 animate-spin text-primary" />
       </div>
     );
@@ -52,7 +52,7 @@ export default function Generate() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5">
+      <div key="login" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5">
         <Card className="max-w-md mx-4">
           <CardHeader className="text-center">
             <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -150,7 +150,7 @@ export default function Generate() {
             </CardHeader>
             <CardContent>
               {generateMutation.isPending && (
-                <div className="min-h-[400px] flex flex-col items-center justify-center gap-4 text-muted-foreground">
+                <div key="generating" className="min-h-[400px] flex flex-col items-center justify-center gap-4 text-muted-foreground">
                   <Loader2 className="w-12 h-12 animate-spin text-primary" />
                   <div className="text-center space-y-2">
                     <p className="font-medium">鑑定文を生成しています...</p>
@@ -160,7 +160,7 @@ export default function Generate() {
                 </div>
               )}
               {!generateMutation.isPending && generatedText && (
-                <div className="space-y-4">
+                <div key="result" className="space-y-4">
                   <div className="bg-muted/30 rounded-lg p-6 min-h-[400px] max-h-[600px] overflow-y-auto">
                     <div className="prose prose-sm max-w-none whitespace-pre-wrap">
                       {generatedText}
@@ -191,7 +191,7 @@ export default function Generate() {
                 </div>
               )}
               {!generateMutation.isPending && !generatedText && (
-                <div className="min-h-[400px] flex items-center justify-center text-muted-foreground">
+                <div key="empty" className="min-h-[400px] flex items-center justify-center text-muted-foreground">
                   <div className="text-center space-y-2">
                     <Sparkles className="w-12 h-12 mx-auto opacity-50" />
                     <p>チャット履歴を入力して「鑑定文を生成」ボタンを押してください</p>

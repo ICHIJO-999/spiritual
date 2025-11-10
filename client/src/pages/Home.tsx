@@ -11,7 +11,7 @@ export default function Home() {
   const isLoggedIn = Boolean(user);
 
   return (
-    <div className="min-h-screen">
+    <div key="home" className="min-h-screen">
       {/* ヘッダー */}
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container py-4 flex items-center justify-between">
