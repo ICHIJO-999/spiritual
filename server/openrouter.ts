@@ -101,7 +101,7 @@ export async function* callClaudeSonnetStream(messages: Message[]): AsyncGenerat
 /**
  * OpenRouter APIを使用してClaude Sonnet 4.5を呼び出す（非ストリーミング）
  */
-export async function callClaudeSonnet(messages: Message[]): Promise<string> {
+export async function callClaudeSonnet(messages: Message[], maxTokens: number = 8000): Promise<string> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   
   if (!apiKey) {
@@ -120,7 +120,7 @@ export async function callClaudeSonnet(messages: Message[]): Promise<string> {
       model: 'anthropic/claude-3.5-sonnet',
       messages: messages,
       temperature: 0.7,
-      max_tokens: 8000,
+      max_tokens: maxTokens,
     }),
   });
 

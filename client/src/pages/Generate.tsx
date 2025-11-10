@@ -14,7 +14,8 @@ export default function Generate() {
   const [generatedText, setGeneratedText] = useState("");
   const [copied, setCopied] = useState(false);
   
-  const generateMutation = trpc.divination.generate.useMutation({
+  // 章別生成方式を使用（質優先）
+  const generateMutation = trpc.divination.generateByChapters.useMutation({
     onSuccess: (data) => {
       setGeneratedText(data.divinationText);
       toast.success("鑑定文が生成されました");
@@ -152,7 +153,8 @@ export default function Generate() {
                   <Loader2 className="w-12 h-12 animate-spin text-primary" />
                   <div className="text-center space-y-2">
                     <p className="font-medium">鑑定文を生成しています...</p>
-                    <p className="text-sm">80件の学習データを参考に、最適な鑑定文を作成中です</p>
+                    <p className="text-sm">章別生成方式で、質の高い鑑定文を作成中です</p>
+                    <p className="text-xs text-muted-foreground">導入→第一章→...→結びを順番に生成します</p>
                   </div>
                 </div>
               ) : generatedText ? (
