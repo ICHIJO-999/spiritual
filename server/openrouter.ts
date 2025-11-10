@@ -40,7 +40,7 @@ export async function callClaudeSonnet(messages: Message[]): Promise<string> {
       'Authorization': `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
       'HTTP-Referer': 'https://divination-tool.manus.space',
-      'X-Title': '深層鑑定文生成ツール',
+      'X-Title': 'Divination Tool',
     },
     body: JSON.stringify({
       model: 'anthropic/claude-3.5-sonnet',
