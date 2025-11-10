@@ -33,10 +33,20 @@ interface OpenRouterResponse {
 import { ENV } from "./_core/env";
 
 export async function* callClaudeSonnetStream(messages: Message[]): AsyncGenerator<string> {
-  const apiKey = ENV.openRouterApiKey;
+  const apiKey = ENV.openRouterApiKey || process.env.OPENROUTER_API_KEY;
+  
+  console.log('[OpenRouter] API Key check:', {
+    hasEnvKey: !!ENV.openRouterApiKey,
+    hasProcessEnvKey: !!process.env.OPENROUTER_API_KEY,
+    finalKeyExists: !!apiKey,
+    keyLength: apiKey?.length || 0
+  });
   
   if (!apiKey) {
-    throw new Error('OPENROUTER_API_KEY is not set');
+    console.error('[OpenRouter] OPENROUTER_API_KEY is not set');
+    console.error('[OpenRouter] ENV:', ENV);
+    console.error('[OpenRouter] process.env.OPENROUTER_API_KEY:', process.env.OPENROUTER_API_KEY);
+    throw new Error('OPENROUTER_API_KEY is not set. Please configure it in Management UI -> Settings -> Secrets');
   }
 
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -104,10 +114,18 @@ export async function* callClaudeSonnetStream(messages: Message[]): AsyncGenerat
  * OpenRouter APIを使用してClaude Sonnet 4.5を呼び出す（非ストリーミング）
  */
 export async function callClaudeSonnet(messages: Message[], maxTokens: number = 8000): Promise<string> {
-  const apiKey = ENV.openRouterApiKey;
+  const apiKey = ENV.openRouterApiKey || process.env.OPENROUTER_API_KEY;
+  
+  console.log('[OpenRouter] callClaudeSonnet - API Key check:', {
+    hasEnvKey: !!ENV.openRouterApiKey,
+    hasProcessEnvKey: !!process.env.OPENROUTER_API_KEY,
+    finalKeyExists: !!apiKey,
+    keyLength: apiKey?.length || 0
+  });
   
   if (!apiKey) {
-    throw new Error('OPENROUTER_API_KEY is not set');
+    console.error('[OpenRouter] OPENROUTER_API_KEY is not set');
+    throw new Error('OPENROUTER_API_KEY is not set. Please configure it in Management UI -> Settings -> Secrets');
   }
 
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
