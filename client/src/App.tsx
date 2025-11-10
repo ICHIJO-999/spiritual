@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Generate from "./pages/Generate";
 import History from "./pages/History";
+import DebugEnv from "./pages/DebugEnv";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -15,6 +16,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/generate"} component={Generate} />
       <Route path={"/history"} component={History} />
+      <Route path={"/debug-env"} component={DebugEnv} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

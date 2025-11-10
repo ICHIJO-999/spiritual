@@ -17,11 +17,24 @@ export default function Generate() {
   // 章別生成方式を使用（質優先）
   const generateMutation = trpc.divination.generateByChapters.useMutation({
     onSuccess: (data) => {
+      console.log('[Generate] Success:', data);
       setGeneratedText(data.divinationText);
       toast.success("鑑定文が生成されました");
     },
     onError: (error) => {
+      console.error('[Generate] Error:', error);
+      console.error('[Generate] Error data:', error.data);
+      console.error('[Generate] Error shape:', error.shape);
       toast.error(`エラー: ${error.message}`);
+      // エラー詳細をアラートで表示
+      const errorDetails = JSON.stringify({
+        message: error.message,
+        code: error.data?.code,
+        httpStatus: error.data?.httpStatus,
+        path: error.data?.path,
+        stack: error.data?.stack
+      }, null, 2);
+      console.error('[Generate] Error details:', errorDetails);
     },
   });
 
