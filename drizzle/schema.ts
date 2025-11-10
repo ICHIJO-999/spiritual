@@ -25,4 +25,32 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * 学習データテーブル：過去の顧客のチャット履歴と鑑定文を保存
+ */
+export const trainingData = mysqlTable("training_data", {
+  id: int("id").autoincrement().primaryKey(),
+  customerId: int("customer_id").notNull(),
+  customerName: text("customer_name").notNull(),
+  chatHistory: text("chat_history").notNull(),
+  divinationText: text("divination_text").notNull(),
+  noteLink: varchar("note_link", { length: 512 }),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type TrainingData = typeof trainingData.$inferSelect;
+export type InsertTrainingData = typeof trainingData.$inferInsert;
+
+/**
+ * 生成履歴テーブル：新しい顧客の鑑定文生成履歴を保存
+ */
+export const generationHistory = mysqlTable("generation_history", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("user_id").notNull(),
+  inputChatHistory: text("input_chat_history").notNull(),
+  generatedDivinationText: text("generated_divination_text").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type GenerationHistory = typeof generationHistory.$inferSelect;
+export type InsertGenerationHistory = typeof generationHistory.$inferInsert;

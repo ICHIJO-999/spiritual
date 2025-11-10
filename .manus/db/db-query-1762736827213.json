@@ -1,0 +1,330 @@
+{
+  "query": "SELECT customer_id, customer_name FROM training_data ORDER BY customer_id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4NHQqMdvkoMbX9t.650d4ed63b9a --database npiXYXZZK4Ljix9XQURbnx --execute SELECT customer_id, customer_name FROM training_data ORDER BY customer_id",
+  "rows": [
+    {
+      "customer_id": "1",
+      "customer_name": "みなみ(yoshioka【破】提出"
+    },
+    {
+      "customer_id": "3",
+      "customer_name": "坂本　香小合【破】11/10提出"
+    },
+    {
+      "customer_id": "4",
+      "customer_name": "いずみ　さやか【破】提出"
+    },
+    {
+      "customer_id": "5",
+      "customer_name": "すぎ 【破】提出"
+    },
+    {
+      "customer_id": "6",
+      "customer_name": "今泉秋史【破希望】11/10 提出"
+    },
+    {
+      "customer_id": "7",
+      "customer_name": "飯嶋雄一【覚醒】提出済"
+    },
+    {
+      "customer_id": "10",
+      "customer_name": "半澤 純栄【破】提出"
+    },
+    {
+      "customer_id": "11",
+      "customer_name": "たくみ【破】提出"
+    },
+    {
+      "customer_id": "12",
+      "customer_name": "Tsuyoshi.H【破】10提出予約済"
+    },
+    {
+      "customer_id": "13",
+      "customer_name": "shiho.h【破】提出予約済"
+    },
+    {
+      "customer_id": "14",
+      "customer_name": "土屋照世　【覚醒】11/9 提出予約済"
+    },
+    {
+      "customer_id": "15",
+      "customer_name": "kyoko【破】11/10提出"
+    },
+    {
+      "customer_id": "16",
+      "customer_name": "峯祥子【破】11/10 提出"
+    },
+    {
+      "customer_id": "17",
+      "customer_name": "森本【破】質問対応"
+    },
+    {
+      "customer_id": "18",
+      "customer_name": "まつ　【破】　質問対応"
+    },
+    {
+      "customer_id": "19",
+      "customer_name": "ありよし【破】提出済"
+    },
+    {
+      "customer_id": "22",
+      "customer_name": "ayami 【破】提出 質問対応"
+    },
+    {
+      "customer_id": "23",
+      "customer_name": "木村まりこ【破】質問対応"
+    },
+    {
+      "customer_id": "24",
+      "customer_name": "Sakiyama 【破】質問回答"
+    },
+    {
+      "customer_id": "25",
+      "customer_name": "evehamaooi【破】提出済"
+    },
+    {
+      "customer_id": "26",
+      "customer_name": "トーマス【破】提出 質問対応（返信）"
+    },
+    {
+      "customer_id": "27",
+      "customer_name": "広瀬享子【破】提出"
+    },
+    {
+      "customer_id": "28",
+      "customer_name": "Megu*　【破】提出"
+    },
+    {
+      "customer_id": "29",
+      "customer_name": "HITOMI　【破】質問対応"
+    },
+    {
+      "customer_id": "30",
+      "customer_name": "mami.t 11/8【破】提出"
+    },
+    {
+      "customer_id": "33",
+      "customer_name": "MIKI 【破】質問対応"
+    },
+    {
+      "customer_id": "34",
+      "customer_name": "山路  美幸【破】質問対応"
+    },
+    {
+      "customer_id": "36",
+      "customer_name": "eri【破】提出"
+    },
+    {
+      "customer_id": "40",
+      "customer_name": "yurina 【破】提出済"
+    },
+    {
+      "customer_id": "41",
+      "customer_name": "T.Mizuki【破】提出"
+    },
+    {
+      "customer_id": "42",
+      "customer_name": "リエ【破】11/8 提出"
+    },
+    {
+      "customer_id": "43",
+      "customer_name": "やこ【破】11/8 提出"
+    },
+    {
+      "customer_id": "44",
+      "customer_name": "横山 珠水【破】提出"
+    },
+    {
+      "customer_id": "45",
+      "customer_name": "高橋真美【破】提出"
+    },
+    {
+      "customer_id": "46",
+      "customer_name": "ゆきちゃん【破】 提出"
+    },
+    {
+      "customer_id": "47",
+      "customer_name": "⚠️いくみ 【破】提出"
+    },
+    {
+      "customer_id": "48",
+      "customer_name": "伊集　【覚醒】提出"
+    },
+    {
+      "customer_id": "50",
+      "customer_name": "まきこ【破】提出"
+    },
+    {
+      "customer_id": "51",
+      "customer_name": "宮本 早苗 【覚醒】提出"
+    },
+    {
+      "customer_id": "52",
+      "customer_name": "藤本めぐみ　【破】提出"
+    },
+    {
+      "customer_id": "53",
+      "customer_name": "미♡ 【破】　提出"
+    },
+    {
+      "customer_id": "54",
+      "customer_name": "竹内優香【破】"
+    },
+    {
+      "customer_id": "55",
+      "customer_name": "asako　【破】"
+    },
+    {
+      "customer_id": "57",
+      "customer_name": "大森ユースケ【破】提出"
+    },
+    {
+      "customer_id": "60",
+      "customer_name": "SAKI  UENO　【破】提出済"
+    },
+    {
+      "customer_id": "61",
+      "customer_name": "naomi 　【破】提出 質問対応"
+    },
+    {
+      "customer_id": "64",
+      "customer_name": "まほ　【破】提出"
+    },
+    {
+      "customer_id": "66",
+      "customer_name": "ふみこ【破】提出"
+    },
+    {
+      "customer_id": "68",
+      "customer_name": "𝓐𝓨𝓐𝓜𝓲【破】提出"
+    },
+    {
+      "customer_id": "69",
+      "customer_name": "chihiro 【破】提出"
+    },
+    {
+      "customer_id": "71",
+      "customer_name": "さとこ♪【破】提出"
+    },
+    {
+      "customer_id": "72",
+      "customer_name": "のりこ【破】 提出"
+    },
+    {
+      "customer_id": "77",
+      "customer_name": "あすみ【破】提出済"
+    },
+    {
+      "customer_id": "82",
+      "customer_name": "正恵　【覚醒】"
+    },
+    {
+      "customer_id": "84",
+      "customer_name": "尚子【破】提出済"
+    },
+    {
+      "customer_id": "85",
+      "customer_name": "ミヨコ【破】　提出済"
+    },
+    {
+      "customer_id": "86",
+      "customer_name": "かぁーな【破】提出"
+    },
+    {
+      "customer_id": "87",
+      "customer_name": "とこ【序】提出済"
+    },
+    {
+      "customer_id": "90",
+      "customer_name": "さえ 【破】提出済"
+    },
+    {
+      "customer_id": "94",
+      "customer_name": "♡ＡＩ♡【破】提出"
+    },
+    {
+      "customer_id": "98",
+      "customer_name": "誠人【覚醒】提出"
+    },
+    {
+      "customer_id": "99",
+      "customer_name": "akiko tashiro【破】提出済み"
+    },
+    {
+      "customer_id": "105",
+      "customer_name": "Ayaka　【破】提出"
+    },
+    {
+      "customer_id": "108",
+      "customer_name": "Hiro【覚醒】　提出済"
+    },
+    {
+      "customer_id": "109",
+      "customer_name": "Hisae　【破】　提出済"
+    },
+    {
+      "customer_id": "112",
+      "customer_name": "yasuko　【破】提出済"
+    },
+    {
+      "customer_id": "113",
+      "customer_name": "mari  【破】提出済"
+    },
+    {
+      "customer_id": "114",
+      "customer_name": "千野 絢子【覚醒】提出"
+    },
+    {
+      "customer_id": "115",
+      "customer_name": "れん【破】提出済み"
+    },
+    {
+      "customer_id": "116",
+      "customer_name": "志賀（亀谷）【破】提出"
+    },
+    {
+      "customer_id": "124",
+      "customer_name": "こかどゆみ【破】提出済"
+    },
+    {
+      "customer_id": "130",
+      "customer_name": "あーちゃん【破】提出"
+    },
+    {
+      "customer_id": "131",
+      "customer_name": "みのり　【序】提出"
+    },
+    {
+      "customer_id": "135",
+      "customer_name": "ケイコ【破】提出済"
+    },
+    {
+      "customer_id": "141",
+      "customer_name": "水上敬子【破】提出済"
+    },
+    {
+      "customer_id": "144",
+      "customer_name": "なめき 【破】提出済"
+    },
+    {
+      "customer_id": "147",
+      "customer_name": "maako【破】提出済"
+    },
+    {
+      "customer_id": "149",
+      "customer_name": "Sumiyo　【破】　提出済"
+    },
+    {
+      "customer_id": "155",
+      "customer_name": "Akemi【序】提出済"
+    },
+    {
+      "customer_id": "199",
+      "customer_name": "kawaichi 【破】鑑定済"
+    }
+  ],
+  "messages": [],
+  "stdout": "customer_id\tcustomer_name\n1\tみなみ(yoshioka【破】提出\n3\t坂本　香小合【破】11/10提出\n4\tいずみ　さやか【破】提出\n5\tすぎ 【破】提出\n6\t今泉秋史【破希望】11/10 提出\n7\t飯嶋雄一【覚醒】提出済\n10\t半澤 純栄【破】提出\n11\tたくみ【破】提出\n12\tTsuyoshi.H【破】10提出予約済\n13\tshiho.h【破】提出予約済\n14\t土屋照世　【覚醒】11/9 提出予約済\n15\tkyoko【破】11/10提出\n16\t峯祥子【破】11/10 提出\n17\t森本【破】質問対応\n18\tまつ　【破】　質問対応\n19\tありよし【破】提出済\n22\tayami 【破】提出 質問対応\n23\t木村まりこ【破】質問対応\n24\tSakiyama 【破】質問回答\n25\tevehamaooi【破】提出済\n26\tトーマス【破】提出 質問対応（返信）\n27\t広瀬享子【破】提出\n28\tMegu*　【破】提出\n29\tHITOMI　【破】質問対応\n30\tmami.t 11/8【破】提出\n33\tMIKI 【破】質問対応\n34\t山路  美幸【破】質問対応\n36\teri【破】提出\n40\tyurina 【破】提出済\n41\tT.Mizuki【破】提出\n42\tリエ【破】11/8 提出\n43\tやこ【破】11/8 提出\n44\t横山 珠水【破】提出\n45\t高橋真美【破】提出\n46\tゆきちゃん【破】 提出\n47\t⚠️いくみ 【破】提出\n48\t伊集　【覚醒】提出\n50\tまきこ【破】提出\n51\t宮本 早苗 【覚醒】提出\n52\t藤本めぐみ　【破】提出\n53\t미♡ 【破】　提出\n54\t竹内優香【破】\n55\tasako　【破】\n57\t大森ユースケ【破】提出\n60\tSAKI  UENO　【破】提出済\n61\tnaomi 　【破】提出 質問対応\n64\tまほ　【破】提出\n66\tふみこ【破】提出\n68\t𝓐𝓨𝓐𝓜𝓲【破】提出\n69\tchihiro 【破】提出\n71\tさとこ♪【破】提出\n72\tのりこ【破】 提出\n77\tあすみ【破】提出済\n82\t正恵　【覚醒】\n84\t尚子【破】提出済\n85\tミヨコ【破】　提出済\n86\tかぁーな【破】提出\n87\tとこ【序】提出済\n90\tさえ 【破】提出済\n94\t♡ＡＩ♡【破】提出\n98\t誠人【覚醒】提出\n99\takiko tashiro【破】提出済み\n105\tAyaka　【破】提出\n108\tHiro【覚醒】　提出済\n109\tHisae　【破】　提出済\n112\tyasuko　【破】提出済\n113\tmari  【破】提出済\n114\t千野 絢子【覚醒】提出\n115\tれん【破】提出済み\n116\t志賀（亀谷）【破】提出\n124\tこかどゆみ【破】提出済\n130\tあーちゃん【破】提出\n131\tみのり　【序】提出\n135\tケイコ【破】提出済\n141\t水上敬子【破】提出済\n144\tなめき 【破】提出済\n147\tmaako【破】提出済\n149\tSumiyo　【破】　提出済\n155\tAkemi【序】提出済\n199\tkawaichi 【破】鑑定済\n",
+  "stderr": "",
+  "execution_time_ms": 1753
+}

@@ -89,4 +89,57 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+/**
+ * 学習データを全件取得する
+ */
+export async function getAllTrainingData() {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get training data: database not available");
+    return [];
+  }
+
+  const { trainingData } = await import("../drizzle/schema");
+  const result = await db.select().from(trainingData);
+  return result;
+}
+
+/**
+ * 生成履歴を保存する
+ */
+export async function saveGenerationHistory(data: {
+  userId: number;
+  inputChatHistory: string;
+  generatedDivinationText: string;
+}) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot save generation history: database not available");
+    return;
+  }
+
+  const { generationHistory } = await import("../drizzle/schema");
+  await db.insert(generationHistory).values(data);
+}
+
+/**
+ * ユーザーの生成履歴を取得する
+ */
+export async function getUserGenerationHistory(userId: number) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get generation history: database not available");
+    return [];
+  }
+
+  const { generationHistory } = await import("../drizzle/schema");
+  const { desc } = await import("drizzle-orm");
+  
+  const result = await db
+    .select()
+    .from(generationHistory)
+    .where(eq(generationHistory.userId, userId))
+    .orderBy(desc(generationHistory.createdAt));
+  
+  return result;
+}
