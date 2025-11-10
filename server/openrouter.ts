@@ -30,8 +30,10 @@ interface OpenRouterResponse {
 /**
  * OpenRouter APIを使用してClaude Sonnet 4.5を呼び出す（ストリーミング対応）
  */
+import { ENV } from "./_core/env";
+
 export async function* callClaudeSonnetStream(messages: Message[]): AsyncGenerator<string> {
-  const apiKey = process.env.OPENROUTER_API_KEY;
+  const apiKey = ENV.openRouterApiKey;
   
   if (!apiKey) {
     throw new Error('OPENROUTER_API_KEY is not set');
@@ -102,7 +104,7 @@ export async function* callClaudeSonnetStream(messages: Message[]): AsyncGenerat
  * OpenRouter APIを使用してClaude Sonnet 4.5を呼び出す（非ストリーミング）
  */
 export async function callClaudeSonnet(messages: Message[], maxTokens: number = 8000): Promise<string> {
-  const apiKey = process.env.OPENROUTER_API_KEY;
+  const apiKey = ENV.openRouterApiKey;
   
   if (!apiKey) {
     throw new Error('OPENROUTER_API_KEY is not set');
