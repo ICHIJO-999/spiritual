@@ -6,9 +6,12 @@ import { APP_TITLE, getLoginUrl } from "@/const";
 
 export default function Home() {
   const { user, logout } = useAuth();
+  
+  // 認証状態を安定化
+  const isLoggedIn = Boolean(user);
 
   return (
-    <div className="min-h-screen">
+    <div key="home" className="min-h-screen">
       {/* ヘッダー */}
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container py-4 flex items-center justify-between">
@@ -19,7 +22,7 @@ export default function Home() {
             <h1 className="text-xl font-bold">{APP_TITLE}</h1>
           </div>
           <div className="flex items-center gap-4">
-            {user ? (
+            {isLoggedIn && user && (
               <>
                 <span className="text-sm text-muted-foreground">
                   {user.name || user.email}
@@ -28,7 +31,8 @@ export default function Home() {
                   ログアウト
                 </Button>
               </>
-            ) : (
+            )}
+            {!isLoggedIn && (
               <Button asChild size="sm">
                 <a href={getLoginUrl()}>ログイン</a>
               </Button>
@@ -57,7 +61,7 @@ export default function Home() {
               顧客一人ひとりに寄り添った深層鑑定文を自動生成します
             </p>
             <div className="flex gap-4 justify-center pt-4">
-              {user ? (
+              {isLoggedIn && (
                 <>
                   <Button asChild size="lg" className="gap-2">
                     <a href="/generate">
@@ -72,7 +76,8 @@ export default function Home() {
                     </a>
                   </Button>
                 </>
-              ) : (
+              )}
+              {!isLoggedIn && (
                 <Button asChild size="lg" className="gap-2">
                   <a href={getLoginUrl()}>
                     <Sparkles className="w-5 h-5" />
@@ -211,14 +216,15 @@ export default function Home() {
               </CardDescription>
             </CardHeader>
             <CardContent className="pb-8">
-              {user ? (
+              {isLoggedIn && (
                 <Button asChild size="lg" className="gap-2">
                   <a href="/generate">
                     <Sparkles className="w-5 h-5" />
                     鑑定文を生成する
                   </a>
                 </Button>
-              ) : (
+              )}
+              {!isLoggedIn && (
                 <Button asChild size="lg" className="gap-2">
                   <a href={getLoginUrl()}>
                     <Sparkles className="w-5 h-5" />
