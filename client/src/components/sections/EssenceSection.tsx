@@ -39,7 +39,7 @@ export function EssenceSection() {
           className={`text-center mb-12 md:mb-20 fade-in-up ${isVisible ? 'visible' : ''}`}
         >
           <span className="text-gold-gradient font-serif-jp text-sm md:text-base tracking-[0.3em]">
-            スピリチュアルの本質
+            
           </span>
           <h2 className="font-serif-jp text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mt-4 leading-tight">
             石は、あなたを

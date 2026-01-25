@@ -50,7 +50,7 @@ export function OfferSection() {
         >
           <GoldLine width="60px" className="mb-6" />
           <p className="text-gold/80 font-serif-jp text-sm tracking-[0.3em] mb-4">
-            クロージング
+            
           </p>
           <h2 className="font-serif-jp text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
             石が、あなたを
@@ -127,7 +127,7 @@ export function OfferSection() {
           
           <div className="space-y-6 font-serif-jp text-base md:text-lg leading-loose mb-8">
             <p className="text-china-red font-bold text-xl md:text-2xl">
-              このページは、売約と同時に消えます。
+              
             </p>
             <p className="text-white/80">
               二度と、この石に出会うことはないでしょう。

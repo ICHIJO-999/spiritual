@@ -39,7 +39,7 @@ export function StorySection() {
           className={`text-center mb-12 md:mb-20 fade-in-up ${isVisible ? 'visible' : ''}`}
         >
           <span className="text-gold-gradient font-serif-jp text-sm md:text-base tracking-[0.3em]">
-            秘匿のストーリー
+            
           </span>
           <h2 className="font-serif-jp text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mt-4 leading-tight">
             なぜ、この石は
@@ -165,7 +165,7 @@ export function StorySection() {
               「...分かった。だが、これは最初で最後だ」
             </blockquote>
             
-            <p className="text-gold text-xl md:text-2xl font-bold text-center pt-4">
+            <p className="text-gold text-xl md:text-2xl font-bold text-center pt-4" style={{color: '#ff0019'}}>
               こうして、私の手元に届いた「奇跡の1点」。
               <br />
               それが、今あなたの目の前にあります。
