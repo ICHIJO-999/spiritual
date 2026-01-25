@@ -1,12 +1,7 @@
 /**
- * HeroSection Component
- * Design: バロック・ミスティシズム
- * 
- * 背景：深い黒のグラデーション
- * 画像：開かれた桐箱の中で、光を放つ透明な石
- * メインコピー：ゴールド・明朝体・大サイズ
- * サブコピー：白・明朝体・中サイズ
- * 右下に金色の装飾的な植物モチーフ
+ * HeroSection - ファーストビュー
+ * デザイン: 漆黒×ゴールド+赤のアクセント（中国をイメージ）
+ * セールスレター形式: 感情に訴えかけるコピーライティング
  */
 
 import { GoldLine } from '@/components/GoldLine';
@@ -42,25 +37,37 @@ export function HeroSection() {
             className={`order-2 lg:order-1 text-left fade-in-up ${isVisible ? 'visible' : ''}`}
             style={{ transitionDelay: '0.2s' }}
           >
-            <h1 className="font-serif-jp text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 md:mb-8">
+            {/* メインコピー - 感情に訴えかける */}
+            <p className="text-gold font-serif-jp text-lg sm:text-xl md:text-2xl leading-relaxed mb-4">
+              「この石を手に取った瞬間、
+            </p>
+            <h1 className="font-serif-jp text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 md:mb-8">
               <span className="text-gold-gradient text-glow block">
-                世界中の富豪が
+                とてつもない強い
               </span>
               <span className="text-gold-gradient text-glow block mt-2">
-                探し求めた、
-              </span>
-              <span className="text-gold-gradient text-glow block mt-2">
-                最後の一石。
+                エネルギーを感じました」
               </span>
             </h1>
             
-            <p className="text-white/90 font-serif-jp text-base sm:text-lg md:text-xl leading-relaxed max-w-lg">
-              世界中の富豪が探し求めた、
-              <br className="hidden sm:block" />
-              最後の一石と言われた、
-              <br className="hidden sm:block" />
-              稀有な逸品を楽しむ…
-            </p>
+            {/* サブコピー - ストーリー性 */}
+            <div className="space-y-4 text-white/90 font-serif-jp text-base sm:text-lg md:text-xl leading-loose">
+              <p>
+                世界中の富豪が探し求め、
+                <br className="hidden sm:block" />
+                <span className="text-china-red font-bold">中国の資産家が独占する</span>。
+              </p>
+              <p>
+                一般市場には、二度と現れないはずだった
+                <br className="hidden sm:block" />
+                <span className="text-gold font-bold">「最後の一石」</span>。
+              </p>
+              <p className="text-white/80">
+                数日間の交渉の末、奇跡的に手にした、
+                <br />
+                <span className="text-gold text-xl md:text-2xl font-bold">たった1点。</span>
+              </p>
+            </div>
 
             <div className="mt-8 md:mt-12">
               <GoldLine width="150px" className="!mx-0" />
@@ -82,8 +89,8 @@ export function HeroSection() {
               />
               
               <img 
-                src="/images/hero-stone.png" 
-                alt="光を放つパワーストーン" 
+                src="/images/hero-realistic.png" 
+                alt="神秘的な光を放つパワーストーン" 
                 className="relative w-full h-auto glow-pulse"
               />
             </div>
@@ -97,6 +104,24 @@ export function HeroSection() {
       {/* Bottom gold line */}
       <div className="absolute bottom-8 left-0 right-0">
         <GoldLine width="80%" />
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <span className="text-gold/60 text-sm font-serif-jp mb-2">Scroll</span>
+        <svg
+          className="w-5 h-5 text-gold/60"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
       </div>
     </section>
   );
