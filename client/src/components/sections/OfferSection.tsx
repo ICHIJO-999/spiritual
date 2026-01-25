@@ -167,21 +167,7 @@ export function OfferSection() {
           <GoldLine width="40%" className="mt-8" />
         </div>
 
-        {/* Trust indicators */}
-        <div 
-          className={`mt-12 md:mt-16 flex flex-wrap justify-center gap-4 md:gap-8 fade-in-up ${ctaVisible ? 'visible' : ''}`}
-          style={{ transitionDelay: '0.3s' }}
-        >
-          {['証明書付き', '完全保証', '限定1点', '送料無料'].map((item) => (
-            <div 
-              key={item}
-              className="flex items-center gap-2 text-gold/80"
-            >
-              <span className="w-2 h-2 bg-gold rounded-full" />
-              <span className="font-serif-jp text-sm">{item}</span>
-            </div>
-          ))}
-        </div>
+
       </div>
 
       {/* Bottom decoration */}

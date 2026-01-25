@@ -103,7 +103,7 @@ export function StorySection() {
               <p className="font-serif-jp text-white/90 text-base md:text-lg leading-loose">
                 <span className="text-china-red font-bold">中国の富裕層たち</span>が、
                 資産運用とエネルギーの両面から、
-                莫大な資金を投じて独占してしまうからです。
+                莫大な資金を投じて独占して全て買い占めをしてしまうからです。
               </p>
 
               <p className="font-serif-jp text-white/80 text-base md:text-lg leading-loose">
@@ -150,7 +150,7 @@ export function StorySection() {
             <p className="text-white/80 text-center">
               何度も、何度も交渉を重ね、
               <br />
-              「人生の転換期にいる、たった一人のために、どうしても必要なんだ」
+              「人生の転換期にいる、どうしても必要なんだ」
               <br />
               と訴え続けました。
             </p>
@@ -165,10 +165,8 @@ export function StorySection() {
               「...分かった。だが、これは最初で最後だ」
             </blockquote>
             
-            <p className="text-gold text-xl md:text-2xl font-bold text-center pt-4" style={{color: '#ff0019'}}>
+            <p className="text-china-red text-xl md:text-2xl font-bold text-center pt-4">
               こうして、私の手元に届いた「奇跡の1点」。
-              <br />
-              それが、今あなたの目の前にあります。
             </p>
           </div>
           
